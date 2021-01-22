@@ -52,7 +52,7 @@ inquirer.prompt([{
         {
             type: 'input',
             name: 'github',
-            message: 'What is the link to your GitHub profile page?',
+            message: 'What is your GitHub username?',
         },
 
     ])
@@ -63,7 +63,7 @@ inquirer.prompt([{
         const title = `# ${data.title} \n \n`;
         const description = `## Description \n\n ${data.description}\n\n `;
 
-        const tableOfContents = "## Table of Contents: \n\n *[Installation](#installation) \n *[Usage](#usage)\n *[Contribution](#contribution)\n *[License](#license) \n *[Tests](#tests)\n *[Questions](#questions)\n\n";
+        const tableOfContents = "## Table of Contents: \n\n *[Installation](#installation)  *[Usage](#usage)\n *[Contribution](#contribution) *[License](#license) *[Tests](#tests) *[Questions](#questions)\n\n";
 
 
         const installation = `## Installation\n\n ${data.installation}\n\n`;
@@ -74,7 +74,7 @@ inquirer.prompt([{
 
         const tests = `## Tests \n\n ${data.test}\n\n`
 
-        const questions = `## Questions \n\n If you have further questions, please email me at: ${data.email}.\n For access to this and my other repositories, please click the following link to my GitHub page: ${data.github}. \n\n`
+        const questions = `## Questions \n\n If you have further questions, please email me at: ${data.email}.\n For access to this and my other repositories, please click the following link to my GitHub page: https://github.com/${data.github}. \n\n`
 
         // console.log(data.license);
 
