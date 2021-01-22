@@ -17,8 +17,8 @@
 
  type in "node index.js" in the terminal and answer each question with the appropriate information.
 
-Click on link below for a video demonstration:
-(https://drive.google.com/file/d/1CwLw-SpTPBHlFIt2t-ZLcMaxjV_rUFXr/view)
+Click on link for a video demonstration:
+https://drive.google.com/file/d/1CwLw-SpTPBHlFIt2t-ZLcMaxjV_rUFXr/view
 
 ## Contribution 
 
