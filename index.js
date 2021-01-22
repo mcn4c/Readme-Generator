@@ -1,8 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
-let licenseName = "";
-let licenseBadge = "";
+const licenseChoice = require("./generateMarkdown")
 
 // TODO: Create an array of questions for user input
 inquirer.prompt([{
@@ -27,11 +26,7 @@ inquirer.prompt([{
             name: 'usage',
             message: 'Give some instructions and examples for how to use this web app',
         },
-        {
-            type: 'input',
-            name: 'uImage',
-            message: 'If a screenshot is included, write out the link here',
-        },
+
         {
             type: 'input',
             name: 'contribution',
@@ -47,7 +42,7 @@ inquirer.prompt([{
             type: 'list',
             message: 'Please choose a license',
             name: 'license',
-            choices: ['MIT License', 'GNU LGPLv3', 'Mozzilla Public Licensing 2.0'],
+            choices: ['MIT License', 'GNU LGPLv3', 'Mozzilla Public Licensing 2.0', 'Apache 2.0'],
         },
         {
             type: 'input',
@@ -63,7 +58,7 @@ inquirer.prompt([{
     ])
     .then((data) => {
 
-        const filename = "README.md";
+        const filename = "sampleREADME.md";
 
         const title = `# ${data.title} \n \n`;
         const description = `## Description \n\n ${data.description}\n\n `;
@@ -74,49 +69,26 @@ inquirer.prompt([{
         const installation = `## Installation\n\n ${data.installation}\n\n`;
 
         const usage = `## Usage \n\n ${data.usage}\n\n`;
-        const usageImage = `![alt text](${data.uImage})\n\n`;
 
         const contribution = `## Contribution \n\n ${data.contribution}\n\n`;
 
         const tests = `## Tests \n\n ${data.test}\n\n`
 
+        const questions = `## Questions \n\n If you have further questions, please email me at: ${data.email}.\n For access to this and my other repositories, please click the following link to my GitHub page: ${data.github}. \n\n`
 
-        function licenseChoice() {
+        // console.log(data.license);
 
-            if (data.license == "MIT License") {
-                let licenseName = "MIT License";
-                let licenseBadge = "the badge"
-                return licenseName;
-                return licenseBadge;
-            } else if (data.license == "GNU LGPLv3") {
-                let licenseName = "GNU LGPLv3";
-                let licenseBadge = "the badge";
-                return licenseName;
-                return licenseBadge;
-            } else if (data.license == "Mozilla Public Licensing 2.0") {
-                let licenseName = "Mozilla Public Licensing 2.0";
-                let licenseBadge = "the badge";
-                return licenseName;
-                return licenseBadge;
-            } else {
-                let licenseName = "No license"
-                let licenseBadge = null;
-                return licenseName;
-                return licenseBadge;
-            }
-        }
-        licenseChoice();
+        const licenseSection = licenseChoice.renderLicenseSection(data.license);
 
-        const displayLicense = `## License \n\n ${licenseName}\n\n `
-        const displayBadge = ` \t ${licenseBadge} \n`
+        const licenseLink = licenseChoice.renderLicenseLink(data.license);
 
-        const questions = `## Questions \n\n If you have further questions, please email me at: ${data.email}.\n For access to this and my other repositories, please click the following link to my GitHub page: ${data.github}.`
+        const badge = licenseChoice.renderLicenseBadge(data.license);
 
 
 
 
-        fs.writeFile(filename, title + displayBadge + description + tableOfContents + installation + usage + contribution + tests + displayLicense + questions, (err) =>
-            err ? console.log(err) : console.log('Success!')
+        fs.writeFile(filename, badge + title + description + tableOfContents + installation + usage + contribution + tests + questions + licenseSection + licenseLink, (err) =>
+            err ? console.log(err) : console.log('Readme complete!')
         );
 
 
