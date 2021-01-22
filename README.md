@@ -18,8 +18,7 @@
  type in "node index.js" in the terminal and answer each question with the appropriate information.
 
 Click on link below for a video demonstration:
-
- [![asciicast](https://asciinema.org/a/113463.png)](https://drive.google.com/file/d/1CwLw-SpTPBHlFIt2t-ZLcMaxjV_rUFXr/view)
+(https://drive.google.com/file/d/1CwLw-SpTPBHlFIt2t-ZLcMaxjV_rUFXr/view)
 
 ## Contribution 
 
