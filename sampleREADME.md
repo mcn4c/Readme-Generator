@@ -1,10 +1,10 @@
 [![GitHub license](https://img.shields.io/badge/license-MozzillaPublicLicensing2.0-blue.svg)]
 
-# aldjlfsk 
+# Readme Generator 
  
 ## Description 
 
- alsdkfjlskdj
+ Command Line Interface app that creates a readme file for a project.
 
  ## Table of Contents: 
 
@@ -13,19 +13,19 @@
 
 ## Installation
 
- laskdfjlsdkjf
+ node js and npm inquirer
 
 ## Usage 
 
- lskfdjlsdjfs
+ type in "node index.js" in the terminal and answer each question with the appropriate information.
 
 ## Contribution 
 
- lsdkfjlsakj
+ none
 
 ## Tests 
 
- alkdjflsjka
+ no tests
 
 ## Questions 
 
