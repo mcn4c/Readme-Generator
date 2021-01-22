@@ -1,10 +1,10 @@
-[![GitHub license](https://img.shields.io/badge/license-MozzillaPublicLicensing2.0-blue.svg)]
+[![GitHub license](https://img.shields.io/badge/license-Apache2.0-blue.svg)]
 
-# Readme Generator 
+# Donna Nextdoor 
  
 ## Description 
 
- Command Line Interface app that creates a readme file for a project.
+ shows you where to shop
 
  ## Table of Contents: 
 
@@ -13,15 +13,15 @@
 
 ## Installation
 
- node js and npm inquirer
+ none
 
 ## Usage 
 
- type in "node index.js" in the terminal and answer each question with the appropriate information.
+ i don't know
 
 ## Contribution 
 
- none
+ none at this time
 
 ## Tests 
 
@@ -29,8 +29,8 @@
 
 ## Questions 
 
- If you have further questions, please email me at: mcn4c@virginia.edu.
+ If you have further questions, please email me at: donnanextdoor70@yahoo.com.
  For access to this and my other repositories, please click the following link to my GitHub page: https://github.com/mcn4c. 
 
 ## License
-https://www.mozilla.org/en-US/MPL/2.0/
+https://www.apache.org/licenses/LICENSE-2.0
